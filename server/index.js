@@ -166,7 +166,7 @@ storage.on('connection', (db) => {
 });
 
 const upload = multer({ storage });
-const url = 'http://localhost:5000'
+const url = 'https://kalam-backend-7ov5.onrender.com'
 
 app.post('/upload', upload.single('file'), async (req, res) => {
     if (!req.file) {
@@ -196,7 +196,7 @@ const getImage = async (req, res) => {
         const readstream = gridfSBucket.openDownloadStream(file._id)
         readstream.pipe(res)
     } catch (error) {
-        return res.status(500).json({ msg: error.message })
+        return res.status(500).json({ msimageg: error.message })
     }
 }
 
