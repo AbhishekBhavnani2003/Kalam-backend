@@ -12,7 +12,7 @@ const sendMail = require('./emailService');
 const { storeOTP, verifyOTP } = require('./otpService');
 
 dotenv.config()
-const port = 5000
+const port = process.env.PORT || 5000
 
 const musername = encodeURIComponent(process.env.MONGO_USERNAME)
 const mpassword = encodeURIComponent(process.env.MONGO_PASSWORD)
